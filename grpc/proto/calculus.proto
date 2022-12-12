@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package calculus;
+
+option go_package = "calculus/grpc/proto";
+
+service calculus {
+    rpc Fibonacci(Empty) returns (Value) {}
+ }
+
+message Empty {
+}
+
+message Value {
+    int32 value = 1;
+}
